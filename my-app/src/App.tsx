@@ -1,24 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { PinnedProjs } from './components/PinnedProjs/PinnedProjs';
 
 function App() {
+  // const [response, setResponse] = useState([]);
+
+  // useEffect(() => {
+  //   fetch('https://gh-pinned-repos.egoist.dev/?username=rutviklhase')
+  //   .then((res) => res.json())
+  //   .then((data)=>{console.log(data);})
+  //   .catch((err)=>{console.log(err.message);})
+  // },[])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PinnedProjs/>
+      {/* <img src='https://raw.githubusercontent.com/rutviklhase/RutvikSandbox/main/my-app/src/assets/exampleimage.jpg'/> */}
     </div>
   );
 }
